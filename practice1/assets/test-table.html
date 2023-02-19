@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      #container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      h3 {
+        text-align: center;
+        font-size: 24px;
+      }
+
+      table {
+        width: 500px;
+        margin: auto;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 5px 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <caption>
+        <h3>Danh sách học viên</h3>
+        <br />
+      </caption>
+      <table>
+        <tr>
+          <th rowspan="2">STT</th>
+          <th rowspan="2">Họ Tên</th>
+          <th rowspan="2">Ngày Sinh</th>
+          <th colspan="3">Điểm</th>
+        </tr>
+        <tr>
+          <th>Toán</th>
+          <th>Văn</th>
+          <th>Anh</th>
+        </tr>
+        <td>1</td>
+        <td>Nguyễn Văn Linh</td>
+        <td>01/05/1997</td>
+        <td>9</td>
+        <td>7</td>
+        <td>9</td>
+      </table>
+    </div>
+  </body>
+</html>
