@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Hien thi dialog -> cho phep nhap gia tri cua N
+    // var N = prompt('Nhap gia tri N')
+    //Chuyen kieu du lieu cua N tu string toi int
+    var arr = [0,1,2,3,4,5,6,7,8,9];
+    // N = parseInt(N)
+    for (i = 0; i < 10; i++) {
+        //tao hang (row) *
+        for (j = 0; j <= i; j++) {
+            document.writeln(`${arr[j]}`)
+        }
+
+        //xuong dong khi hien thi ket qua cua tung hang
+        document.writeln("<br/>")
+    }
+</script>
+</body>
+</html>
