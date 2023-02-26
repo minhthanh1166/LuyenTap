@@ -127,6 +127,101 @@ a {
     border: 5px solid #000;
 }
 
+#section-product {
+    background-color: #666d89;
+    padding: 16px
+}
+
+#section-product h2 {
+    color: #adb1bb;
+    font-family: "Ubuntu-Bold";
+}
+
+#section-product p {
+    padding: 20px 0;
+    font-family: "Ubuntu-Italic";
+    color: #adb1bb;
+}
+
+ .container-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.container-nav li {
+    margin: 0 5px;
+}
+
+.container-nav a {
+    padding: 4px;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #a59d9d;
+    border-radius: 5px;
+}
+
+.container-nav li:first-child a {
+   border: 2px solid #e0dcdc;
+}
+
+
+#section-about {
+    padding: 16px;
+}
+
+#section-about h2 {
+    font-family: "Ubuntu-Bold";
+    color: #666d89;
+}
+
+#section-about p {
+    font-family: "Ubuntu-Italic";
+    padding: 20px 0;
+    color: #7c7c7c;
+}
+
+.container-about img {
+    width: 185px;
+    height: 230px;
+}
+
+.mt , .row-about {
+    display: flex;
+    justify-content: center !important;
+    flex-wrap: wrap;
+} 
+
+.container-about {
+    width: 33.3333333%;
+}
+
+#section-about .col-about {
+    justify-content: space-between;
+}
+
+.col-about span {
+    display: grid;
+    font-family: "Ubuntu-Bold";
+    color: #666d89;
+   
+}
+
+.col-about p {
+    display: grid;
+    font-family: "Ubuntu-Bold";
+    color: #666d89;
+    width: 200px;
+}
+
+.icon-about i {
+    border: 1px solid #000;
+    border-radius: 50%;
+    padding: 4px;
+    margin: 0 3px;
+    color: #666d89;
+}
+
+
 
 #footer {
     background-color: #ccc;
@@ -195,4 +290,6 @@ a {
         width: 100%;
     }
 }
+
+
 
