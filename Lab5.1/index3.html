@@ -131,16 +131,13 @@
         let resultJSTwo = document.querySelector("#result2");
         let resultJSThree = document.querySelector("#result3");
         let inputPT = document.getElementById("enterElement").value;
-        let maxNumber = 20;
+        let maxNumber = 10;
         console.log("Check đầu vào: " + inputPT)
         // Kiểm tra chuỗi rỗng
         if (inputPT === ""){
             resultJSThree.innerText = "--Vui lòng nhập dữ liệu!";
-        }else if(inputPT.length >= maxNumber) {
-            resultJSThree.innerText = "--Vui lòng nhập nhỏ hơn 20 phần tử!";
-            resultJS.innerText = `-- Tổng các phần tử:`;
-            resultJSTwo.innerText = `-- Các phần tử:`;
-
+        }else if(inputPT.length > maxNumber) {
+            resultJSThree.innerText = "--Vui lòng nhập nhỏ hơn 10 phần tử!";
         }else {
             let myTrim = inputPT.trim();
             let mySplip = myTrim.split("");
