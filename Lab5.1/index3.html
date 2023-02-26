@@ -114,15 +114,6 @@
 <script>
 
 
-    // Hàm tính tổng các phần tử
-    const mySum = (arr) => {
-        let count = 0;
-        for (let i = 0; i < arr.length; i++) {
-            count += arr[i];
-        }
-        return count;
-    }
-
     // Hàm để in các phần tử
     const myCount = (arr) => {
         let resultCount;
@@ -140,31 +131,36 @@
         let resultJSTwo = document.querySelector("#result2");
         let resultJSThree = document.querySelector("#result3");
         let inputPT = document.getElementById("enterElement").value;
+        let maxNumber = 20;
         console.log("Check đầu vào: " + inputPT)
-
-
+        // Kiểm tra chuỗi rỗng
         if (inputPT === ""){
             resultJSThree.innerText = "--Vui lòng nhập dữ liệu!";
+        }else if(inputPT.length >= maxNumber) {
+            resultJSThree.innerText = "--Vui lòng nhập nhỏ hơn 20 phần tử!";
+            resultJS.innerText = `-- Tổng các phần tử:`;
+            resultJSTwo.innerText = `-- Các phần tử:`;
+
         }else {
-            // inputPT = Math.floor(inputPT / 10);
-            let mySplit = inputPT.split("");
+            let myTrim = inputPT.trim();
+            let mySplip = myTrim.split("");
+            console.log(mySplip)
 
-
+            // Đếm phần tử
             let sum = 0;
-
-            while (mySplit) {
-                sum += mySplit;
-                mySplit = Math.floor(mySplit);
+            while (inputPT) {
+                sum += inputPT % 10;
+                inputPT = Math.floor(inputPT / 10);
             }
-             console.log("tổng các phần tử: " + mySplit)
+
+            resultJS.value = sum;
+            console.log("tổng các phần tử: " + sum);
 
 
-
-            // resultJS.innerText = `-- Tổng các phần tử là:${mySum(parseInt(inputPT.toString()))}`;
-            console.log(typeof parseInt(inputPT.toString()))
-            resultJSTwo.innerText = `-- Các phần tử là: ${myCount(inputPT.toString())}`;
+            resultJSThree.innerText = "";
+            resultJS.innerText = `-- Tổng các phần tử là:${sum}`;
+            resultJSTwo.innerText = `-- Các phần tử là: ${myCount(mySplip.toString())}`;
         }
-
     }
 </script>
 </body>
