@@ -131,40 +131,66 @@
 </section>
 <script>
 
+    //  This is function resets !
     const myResets = () => {
-        location.reload();
+        return location.reload();
     }
+
+    // This is function set time out.
+    const setTimeOut = () => {
+        const myTimeout = setTimeout(myResets, 5000);
+        return myTimeout;
+    }
+
+    // This is function set input = null
+    const resetInput = () => {
+        resultSuccess.innerText = "";
+        resultEmail.innerText = "";
+        resultPassword.innerText = "";
+    }
+
     const mySubmit = () => {
         let getEmail = document.getElementById("email").value;
         let getPassword = document.getElementById("password").value;
         let resultEmail = document.getElementById("resultEmail");
         let resultPassword = document.getElementById("resultPassword");
         let resultSuccess = document.getElementById("resultSuccess");
+        let regExpEmail = /\S+@\S+\.\S+/;
+        // let regexMinMaxPass = /^.{8,}$/;
+        let regexPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+        // let regexPass = /[^a-zA-Z\d]/;
+        // let regexPassNumber = /\d/;
 
         // Check password 8 to 16 characters
         //let regularExpression  = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
         let minNumberCharacter = 8;
 
+        // Call function reset input.
+        resetInput();
 
 
         if (getEmail === "") {
-            resultSuccess.innerText = "";
             resultEmail.style.color = "red";
             resultEmail.innerText = "Please enter your email address!"
 
         } else if (getPassword === "") {
-            resultEmail.innerText = "";
             resultPassword.style.color = "red";
-            resultPassword.innerText = "Please enter password!"
-
-        } else if (getPassword.length < minNumberCharacter) {
-            resultSuccess.innerText = ""
+            resultPassword.innerText = "Please enter password!";
+            return false;
+        } else if (!regExpEmail.test(getEmail)) {
+            resultEmail.style.color = "red";
+            resultEmail.innerText = "Please enter your email in the correct format!";
+            return false;
+        } else if (!regexPass.test(getPassword)) {
             resultPassword.style.color = "red";
-            resultPassword.innerText = "Please enter a password of 8 to 16 characters!"
+            resultPassword.innerText = "Please enter a password of 8 to 16, add capital letters and special characters!";
+            return false;
         } else {
-            resultPassword.innerText = "";
             resultSuccess.style.color = "green";
             resultSuccess.innerText = "Login successful!";
+
+            // Call function set time out 5.
+            setTimeOut();
         }
     }
 

@@ -131,28 +131,29 @@
         let resultJSTwo = document.querySelector("#result2");
         let resultJSThree = document.querySelector("#result3");
         let inputPT = document.getElementById("enterElement").value;
-        let maxNumber = 10;
+        let maxNumber = 20;
         console.log("Check đầu vào: " + inputPT)
         // Kiểm tra chuỗi rỗng
         if (inputPT === ""){
             resultJSThree.innerText = "--Vui lòng nhập dữ liệu!";
         }else if(inputPT.length > maxNumber) {
-            resultJSThree.innerText = "--Vui lòng nhập nhỏ hơn 10 phần tử!";
+            resultJSThree.innerText = "--Vui lòng nhập nhỏ hơn 20 phần tử!";
         }else {
             let myTrim = inputPT.trim();
             let mySplip = myTrim.split("");
             console.log(mySplip)
 
             // Đếm phần tử
-            let sum = 0;
-            while (inputPT) {
-                sum += inputPT % 10;
-                inputPT = Math.floor(inputPT / 10);
-            }
+            // This function takes a string as input and returns the sum of all numbers in it
+            // Split the string by commas and store it in an array
+            let strArr = inputPT.split("");
+            // Use reduce method to calculate the sum of all numbers in the array
+            // Convert each element to a number using parseFloat
+            let sum = strArr.reduce((acc, val) => acc + parseFloat(val.toString()), 0);
+            // Return the sum
 
             resultJS.value = sum;
             console.log("tổng các phần tử: " + sum);
-
 
             resultJSThree.innerText = "";
             resultJS.innerText = `-- Tổng các phần tử là:${sum}`;
