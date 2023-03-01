@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <h1>Các điều khiển thường dùng trên form</h1>
+    <form
+      action=""
+      method="post"
+      enctype="multipart/form-data"
+      id="frm"
+      name="frm"
+    >
+      <p>
+        Kiểu text:
+        <input
+          type="text"
+          name="txt"
+          id="txt"
+          required
+          placeholder="Nhập nội dung..."
+        />
+      </p>
+      <p>
+        Kiểu password:
+        <input
+          type="password"
+          name="password"
+          id="password"
+          required
+          placeholder="Nhập password"
+        />
+      </p>
+      <p>
+        Kiểu Email:
+        <input
+          type="email"
+          name="email"
+          id="elit"
+          required
+          placeholder="domain@gmail.com"
+        />
+      </p>
+      <p>
+        Kiểu Tel:
+        <input type="tel" name="tel" id="phone" placeholder="(+84) 829936692" />
+      </p>
+      <p>
+        Kiểu Number:
+        <input
+          type="number"
+          name="num"
+          id="num"
+          min="0"
+          max="100"
+          step="10"
+          value="50"
+        />
+      </p>
+      <p>
+        Kiểu ranger:
+        <input type="range" name="ran" id="ran" min="0" max="50" value="20" />
+      </p>
+      <p>
+        Kiểu color:
+        <input type="color" name="color" id="color" />
+      </p>
+      <p>
+        Kiểu date
+        <input type="date" name="date" id="date" />
+      </p>
+      <p>
+        Kiểu radio:
+        <input type="radio" name="radio" id="radio" checked />
+        <label for="gtNam">Nam</label>
+        <input type="radio" name="radio" id="radio" />
+        <label for="gtNu">Nữ</label>
+        <input type="radio" name="radio" id="radio" />
+        <label for="gtKhac">Khác</label>
+      </p>
+      <p>
+        Kiểu checkbox:
+        <input type="checkbox" name="checkbox" id="checkbox" checked />
+        <label for="checkbox">Bóng đá</label>
+        <input type="checkbox" name="checkbox2" id="checkbox2" />
+        <label for="checkbox2">Bóng bàn</label>
+        <input type="checkbox" name="checkbox3" id="checkbox3" />
+        <label for="checkbox3">Cầu lông</label>
+      </p>
+      <p>
+        Kiểu select:
+        <select name="cbo" id="cbo">
+          <option value="">--Chọn--</option>
+          <option value="HN">Hà Nội</option>
+          <option value="HCM">Hồ Chí Minh</option>
+          <option value="Nhatrang">Nha Trang</option>
+          <option value="CanTho">Cần Thơ</option>
+          <option value="Phuquoc">Phú Quốc</option>
+        </select>
+      </p>
+      <p>
+        Kiểu textarea <input type="<textarea rows="20" cols="50"></textarea>
+      </p>
+      <p>
+        Kiểu file:
+        <input type="file" name="upload" id="upload" />
+      </p>
+      <p>
+        <input type="submit" name="submit" id="submit" />
+        <input type="reset" name="reset" id="reset" />
+      </p>
+    </form>
+  </body>
+</html>

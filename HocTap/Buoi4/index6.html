@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cú pháp tương tác css trong html</title>
+  </head>
+  <body>
+    <section>
+      <h1>Cú pháp tương tác css trong html</h1>
+      <hr />
+    </section>
+    <!-- Cú pháp tương tác thông qua tên thẻ -->
+    <style>
+      h2 {
+        color: red;
+      }
+      p {
+        color: green;
+        border: 2px solid red;
+        border-top: 2px solid blue;
+        border-bottom: 2px solid rgb(60, 255, 0);
+        margin: 1rem;
+        padding: 1rem;
+        margin: 1.5rem;
+      }
+      .noidung {
+        color: rgb(255, 0, 238);
+      }
+    </style>
+    <section>
+      <h2>Cú pháp tương tác thông qua tên thẻ</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+      <hr />
+    </section>
+    <!-- Cú pháp css tương tác thông qua class của phần tử html -->
+    <style>
+      #zone1 {
+        background-color: rgb(255, 0, 0);
+
+        border: 2px solid blue;
+        margin: 1rem;
+        padding: 1rem;
+      }
+    </style>
+    <section id="zone1">
+      <h2 style="color: black">Lorem ipsum dolor sit amet</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur.
+      </p>
+    </section>
+
+    <!--  Cú pháp css tương tác thông qua class của phần tử html -->
+    <style>
+      .title {
+        color: blue;
+        border: 2px solid red;
+        font-family: Tahoma;
+      }
+    </style>
+    <section id="zone">
+      <h2 class="title">
+        Cú pháp css tương
+        <span class="noidung">tác thông qua class của phần</span> tử html
+      </h2>
+    </section>
+
+    <!-- Cú pháp css thông qua giá trị thuộc tính của phần tử -->
+    <style>
+      input[type="text"] {
+        width: 100%;
+        border: 1px solid rgb(114, 81, 81);
+        border-radius: 0;
+        padding: 0.25rem 0.5rem;
+      }
+      input:focus {
+        outline: none;
+        border-color: red;
+      }
+
+      input[type="submit"] {
+        box-shadow: 0px;
+      }
+    </style>
+    <section>
+      <h3>Cú pháp css thông qua giá trị thuộc tính của phần tử</h3>
+      <hr />
+      <div class="row">
+        <label for="hoTen">Họ tên:</label>
+        <input type="text" name="hoTen" id="hoTen" />
+      </div>
+      <div class="row">
+        <label for="taiKhoan">Tài khoản:</label>
+        <input type="text" name="taiKhoan" id="taiKhoan" />
+      </div>
+      <div class="row">
+        <input type="reset" name="reset" id="reset" />
+        <input type="submit" name="submit" id="submit" />
+      </div>
+    </section>
+  </body>
+</html>

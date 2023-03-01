@@ -83,6 +83,7 @@
             color: #ccc;
             text-transform: uppercase;
             font-weight: 700;
+
         }
 
         .input-fluid > input:nth-child(2):hover {
@@ -139,8 +140,15 @@
         let arr = myName.split("");
         console.log(arr)
         if (name === "") {
+            resultLT.style.backgroundColor = "rgb(58, 58, 94)";
+            resultLT.innerText = "Vui lòng không được để trống họ tên!";
+            return false;
+        }else if(name.length < 5) {
+            resultLT.style.backgroundColor = "rgb(58, 58, 94)";
             resultLT.innerText = "Vui lòng nhập đầy đủ họ tên!";
+            return false;
         } else if (age === "") {
+            resultLT.style.backgroundColor = "rgb(58, 58, 94)";
             let checkAge = name === "" ? "Bạn" : name;
             resultLT.innerText = `Vui lòng nhập tuổi  ${checkAge}`;
         } else {

@@ -1,0 +1,23 @@
+Phần 3 - Ngôn ngữ lập trình kịch bản (JS).
+1. Cú pháp
+2. Biến , hằng, kiểu dữ , liệu, toán tử, toán hạng, biểu thức, câu lệnh, khối lệnh, ...
+3. I/Output 
+4. các cấu trúc điều khiển: 
+    (Có 3 loại cấu trúc điều khiển)
+    1. - Cấu trúc lựa chọn/ Rẽ nhánh
+        (js) => if (nhánh)
+             => switch (nhánh).
+    2. - Lặp(Loop).
+            => for (4 dạng for)
+            => while.
+            => do while.
+            => for in 
+    3. - Lệnh nhảy.
+        (js) 
+        break;
+        continue;
+        return;
+5. Mảng.
+6. Hàm.
+Object / DOM
+

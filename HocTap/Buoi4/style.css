@@ -1,0 +1,16 @@
+body {
+  margin: 16px;
+  background-color: yellow; }
+  body h1 {
+    color: red;
+    font-size: 2rem; }
+    body h1::first-letter {
+      font-size: 70px; }
+  body p {
+    color: green; }
+    body p:hover {
+      color: blue; }
+    body p:first-letter {
+      font-size: 40px; }
+
+/*# sourceMappingURL=style.css.map */

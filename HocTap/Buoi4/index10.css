@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+nav {
+    margin: 1rem 10%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    height: 35px;
+    
+}
+
+/* nav ul li {
+    background-color: violet;
+} */
+
+nav ul li{
+    border-left: 1px solid red;
+    flex:0 100%;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    opacity: 0.8;
+    color: #ffff;
+}
+nav a {
+    text-decoration: none;
+    background-color: green;
+    display: block;
+    padding: .5rem 1rem;
+    justify-content: space-evenly ;
+}
+
+/* Làm sao để các item nó gộp lại? */

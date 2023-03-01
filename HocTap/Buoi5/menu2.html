@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu dọc</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+
+      html,
+      body {
+        font-size: 16px;
+      }
+
+      nav {
+        background-color: #78b43d;
+        width: 200px;
+      }
+
+      nav ul {
+        list-style: none;
+        border: 1px solid #fff;
+      }
+
+      nav ul li {
+        border-bottom: 1px solid #fff;
+      }
+
+      nav ul li:last-child {
+        border-bottom: none;
+      }
+
+      nav a:hover {
+        background-color: red;
+      }
+
+      nav a {
+        display: block;
+        padding: 1rem;
+        text-decoration: none;
+        color: #fff;
+      }
+      nav ul li:first-child a {
+        background-color: red;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <nav>
+        <ul>
+          <li type="top"><a type="color" href="#">Danh mục</a></li>
+          <li><a href="#">Sản phẩm</a></li>
+          <li><a href="#">Dịch vụ</a></li>
+          <li><a href="#">Hỗ trợ</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </section>
+  </body>
+</html>

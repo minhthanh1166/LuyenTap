@@ -1,0 +1,21 @@
+body {
+    margin: 16px;
+    background-color: yellow;
+    h1 {
+        color: red;
+        font-size: 2rem;
+        &::first-letter {
+            font-size: 70px;
+        }
+        
+    }
+    p{
+        color: green;   
+        &:hover {
+            color: blue;
+        }
+        &:first-letter {
+            font-size: 40px;
+        }
+    }
+}
