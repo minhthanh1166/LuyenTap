@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sử dụng hàm WriteLine kết hợp mới thẻ html</title>
+</head>
+<body>
+<script>
+  document.write("<div style=' text-align: center; margin: 0; padding: 0;'>");
+  document.write("<h1>Mẹ</h1>");
+  document.write("<p>Lặng rồi cả tiếng con ve</p>");
+  document.write("<p>Con ve cũng mệt vì hè nắng oi.</p>");
+  document.write("<p>Nhà em vẫn tiếng ạ ời</p>");
+  document.write("<p>Kẽo cà tiếng võng mẹ ngồi mẹ ru.</p>");
+  document.write("<p>Lời ru có gió mùa thu</p>");
+  document.write("<p>Bàn tay mẹ quạt mẹ đưa gió về.</p>");
+  document.write("<p>Những ngôi sao thức ngoài kia</p>");
+  document.write("<p>Chẳng bằng mẹ đã thức vì chúng con.</p>");
+  document.write("<p>Đêm nay con ngủ giấc tròn</p>");
+  document.write("<p>Mẹ là ngọn gió của con suốt đời.</p>");
+  document.write("<div/>");
+
+
+  let item = document.getElementsByTagName("p");
+  for(let i = 0; i < item.length; i++) {
+      // item[i].style.color = "red";
+      item[i].style.margin = "10px 0";
+      item[i].style.fontStyle = "italic";
+      console.log(item[i]);
+  }
+</script>
+</body>
+</html>
