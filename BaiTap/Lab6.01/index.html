@@ -31,7 +31,7 @@
     idSection.style.backgroundColor = "#ccc";
     idSection.style.width = "400px";
     idSection.style.height = "500px";
-    idSection.style.margin = "0 auto";
+    idSection.style.margin = "40px auto";
 
     let divContainer = document.createElement("div");
     idSection.appendChild(divContainer);
@@ -44,8 +44,17 @@
     caption.style.textAlign = "center";
     divContainer.appendChild(caption);
 
+    let centerTable = document.createElement("div");
+    divContainer.appendChild(centerTable);
+    centerTable.classList.add("center-table");
+    centerTable.style.position = "absolute";
+    centerTable.style.top = "20%";
+    centerTable.style.left = "50%";
+    centerTable.style.transform = "translate(-50%, -50%)";
+    centerTable.style.margin = "80px 0";
+
     let trUser = document.createElement("tr");
-    divContainer.appendChild(trUser);
+    centerTable.appendChild(trUser);
 
     let tdUser = document.createElement("td");
     trUser.appendChild(tdUser);
@@ -57,10 +66,17 @@
     let inputUserName = document.createElement("input");
     inputUserName.type = "text";
     inputUserName.id = "getUserName";
-    tdUser.appendChild(inputUserName)
+    tdUser.appendChild(inputUserName);
+
+    let smallUserName = document.createElement("small");
+    smallUserName.classList.add("smallUser");
+    tdUser.appendChild(smallUserName);
+    smallUserName.textContent = "Bạn chưa nhập user name!";
+    smallUserName.style.display = "none";
+
 
     let trPass = document.createElement("tr");
-    divContainer.appendChild(trPass);
+    centerTable.appendChild(trPass);
 
     let tdPass = document.createElement("td");
     trPass.appendChild(tdPass);
@@ -74,11 +90,31 @@
     inputPass.id = "getPassword";
     tdPass.appendChild(inputPass);
 
-    let selectAlltr = document.querySelectorAll("tr");
-    for (let i = 0; i < selectAlltr.length; i++) {
-        selectAlltr[i].style.width = "100%";
+    let smallPassword = document.createElement("small");
+    smallPassword.classList.add("smallPass");
+    tdPass.appendChild(smallPassword);
+    smallPassword.textContent = "Bạn chưa nhập password!";
+    smallPassword.style.display = "none";
 
-    }
+    let trBtn = document.createElement("tr");
+    centerTable.appendChild(trBtn);
+    trBtn.classList.add("tr-btn");
+
+    let tdBtn = document.createElement("td");
+    trBtn.appendChild(tdBtn);
+    tdBtn.classList.add("td-btn");
+    tdBtn.style.display = "flex";
+
+    let inputSubmid = document.createElement("input");
+    inputSubmid.type = "submit";
+    inputSubmid.onclick = submitClickk;
+    tdBtn.appendChild(inputSubmid)
+
+    let inputReset = document.createElement("input");
+    inputReset.type = "reset";
+    inputReset.onclick = resetClickk;
+    tdBtn.appendChild(inputReset)
+
 
     let selectAlltd = document.querySelectorAll("td");
     for (let i = 0; i < selectAlltd.length; i++) {
@@ -89,9 +125,45 @@
 
     let selectAllInput = document.querySelectorAll("input");
     for (let i = 0; i < selectAllInput.length; i++) {
-        selectAllInput[i].style.width = "100%";
+        selectAllInput[i].style.width = "95%";
+        selectAllInput[i].style.padding = "8px 5px";
     }
 
+    let selectSmall = document.querySelectorAll("small");
+    for (let i = 0; i < selectSmall.length; i++) {
+        selectSmall[i].style.color = "red";
+    }
+
+    // Kiểm tra
+    function submitClickk() {
+        let inputUser = document.getElementById("getUserName");
+        let inputPass = document.getElementById("getPassword");
+        let smallUser = document.querySelector(".smallUser");
+        let smallPass = document.querySelector(".smallPass");
+
+        if (!inputUser.value) {
+            smallUser.style.display = "block";
+            inputUser.focus();
+            return false;
+        }else{
+            smallUser.style.display = "none";
+        }
+        if (!inputPass.value) {
+            smallPass.style.display = "block";
+            inputPass.focus();
+            return false;
+        }else {
+            smallPass.style.display = "none";
+        }
+
+        alert("Đăng nhập thành công!");
+    }
+
+    function resetClickk() {
+        console.log("111")
+        document.getElementById("getUserName").value = "";
+        document.getElementById("getPassword").value = "";
+    }
 </script>
 </body>
 </html>
