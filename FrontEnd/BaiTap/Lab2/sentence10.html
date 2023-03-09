@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+      }
+      .container {
+        margin: 0 auto;
+        border: solid 3px #e3e0e3;
+        width: 600px;
+      }
+      .container input {
+        border: 1px;
+        border-bottom: solid #e3e0e3;
+        border-left: solid #e3e0e3;
+        border-right: solid #e3e0e3;
+        border-top: solid #817575;
+      }
+      .image {
+        padding-right: 500px;
+        background-color: rgba(202, 53, 23, 255);
+        padding: -5px 0;
+      }
+      .image img {
+        width: 90%;
+      }
+      .content {
+        padding: 0 10px;
+      }
+      .item {
+        width: 100%;
+      }
+      .pc {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      .pc select {
+        width: 100%;
+        margin: 20px 0;
+      }
+      .date {
+        display: flex;
+        margin-top: 20px;
+      }
+      .date > input {
+        width: 10%;
+      }
+      .date-time {
+        margin-right: 35px;
+        margin-bottom: 20px;
+      }
+      .submit {
+        padding: 0 5px;
+        margin-bottom: 20px;
+      }
+
+      @media (width >= 500px) {
+        body {
+          padding: 0;
+        }
+        .container {
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="image">
+        <img src="./image/Wufoo_Logo_text.png" alt="" />
+      </div>
+      <div class="content">
+        <h2 style="margin-top: 20px; margin-bottom: 20px">To Do List</h2>
+        <h4 style="margin-bottom: 20px">Item</h4>
+        <input class="item" type="text" />
+        <h4 style="margin-top: 20px">Description</h4>
+        <div>
+          <textarea
+            style="width: 100% !important"
+            name=""
+            id=""
+            rows="10"
+          ></textarea>
+        </div>
+        <div class="pc">
+          <div class="priority">
+            <h4>Priority</h4>
+            <select>
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="opel">Opel</option>
+              <option value="audi">Audi</option>
+            </select>
+          </div>
+          <div class="category">
+            <h4>Category</h4>
+            <select>
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="opel">Opel</option>
+              <option value="audi">Audi</option>
+            </select>
+          </div>
+        </div>
+        <h4>Due Date</h4>
+        <div class="date">
+          <input type="text" />
+          <h3>/</h3>
+          <input type="text" />
+          <h3>/</h3>
+          <input type="text" />
+        </div>
+        <div>
+          <label class="date-time" for="">MM</label>
+          <label class="date-time" for="">DD</label>
+          <label class="date-time" for="">YYYY</label>
+        </div>
+        <h4 style="margin-top: 20px">Status</h4>
+        <input type="checkbox" name="" id="" />
+        <label for="">Done.</label><br /><br />
+        <input class="submit" type="submit" value="Submit" />
+      </div>
+    </div>
+  </body>
+</html>

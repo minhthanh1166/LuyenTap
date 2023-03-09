@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nhập từ hàm prompt() cho phép đếm số chẵn số lẻ</title>
+</head>
+<body>
+<script>
+    let evenCount = 0;
+    let oddCount = 0;
+    let input = prompt("Nhập số: ");
+    let sum = parseInt(input);
+    console.log(sum);
+    console.log(typeof sum);
+
+    // for (let i = 1; i <= sum ; i++) {
+    //     if(i % 2 === 0) {
+    //         evenCount++;
+    //     }
+    //     if(i % 2 !== 0) {
+    //         oddCount++;
+    //     }
+    // }
+    for (let i = 1; i <= sum; i++) {
+        // Kiểm tra số chẵn
+        if (i % 2 === 0) {
+            evenCount++;
+        }
+
+        // Kiểm tra số lẻ
+        if (i % 2 !== 0) {
+            oddCount++;
+        }
+    }
+
+    // // let i = 1;
+    // // while (i <= sum) {
+    // //     if(i % 2 === 0) {
+    // //         evenCount++;
+    // //     }
+    // //     if(i % 2 !== 0) {
+    // //         oddCount++;
+    // //     }
+    // //     i++;
+    // // }
+    //
+    // for (let i = 1; i <= sum ; i++) {
+    //     if(i % 2 === 0) {
+    //         evenCount++;
+    //     }
+    //     if(i % 2 !== 0) {
+    //         oddCount++;
+    //     }
+    // }
+
+    document.write("Số chẵn: " + evenCount + " " + "Số lẻ " + oddCount);
+</script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+/* // Example
+// Apply styles starting from medium devices and up to extra large devices */
+@media (max-width: 419.98px) { 
+    html, body {
+        background: red;
+        font-size: 16px;
+    }
+
+    .container {
+        margin: 0 10%;
+    }
+
+    .col {
+        width: 100%;
+    }
+ }
+@media (min-width: 420px) and (max-width: 575.98px) { 
+        html, body {
+        background: green;
+        font-size: 18px;
+    }
+
+    .container {
+        margin: 0 10%;
+    }
+
+    .col {
+        width: 100%;
+    }
+ }
+
+  @media (min-width: 503px) and (max-width: 768.98px) { 
+        html, body {
+        background: rgb(93, 165, 64);
+        font-size: 22px;
+    }
+
+    .container {
+        margin: 0 5%;
+    }
+
+    .col {
+        width: 50%;
+    }
+ }
+
+ @media (min-width: 768px) and (max-width: 988.98px) { 
+        html, body {
+        background: rgb(93, 165, 64);
+        font-size: 22px;
+    }
+
+    .container {
+        margin: 0 5%;
+    }
+
+    .col {
+        width: 33%;
+    }
+ }
+@media (min-width: 988px) and (max-width: 1199.98px) { 
+        html, body {
+        background: blue;
+        font-size: 22px;
+    }
+
+    .container {
+        margin: 0 5%;
+    }
+
+    .col {
+        width: 25%;
+    }
+ }
+@media (min-width: 1200px) and (max-width: 1399.98px) { 
+    html, body {
+        background: violet;
+        font-size:24px;
+    }
+
+    .container {
+        margin: 0 5%;
+    }
+
+    .col {
+         width: 20%;
+    }
+
+ }
+@media (min-width: 1400px) and (max-width: 1599.98px) { 
+        html, body {
+        background: greenyellow;
+        font-size: 26px;
+    }
+
+    
+    .container {
+        margin: 0 5%;
+    }
+
+   
+    .col {
+         width: 20%;
+    }
+ }
+@media (min-width: 1600px) { 
+        html, body {
+        background: cornflowerblue;
+    }
+
+    .container {
+        margin: 0 10%;
+    }
+
+    .col {
+         width: 25%;
+    }
+ }
+
+
+ #album img {
+    width: 200px;
+    height: 15rem;
+ }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+
+    padding: 5px;
+}
+
+.col  img {
+    border: 5px solid #000;
+    border-radius: 10px;
+}
+
+
+

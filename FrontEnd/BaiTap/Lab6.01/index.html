@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Giới thiệu DOM và event cách sử dụng</title>
+<!--    <style>-->
+<!--        * {-->
+<!--            margin: 0;-->
+<!--            padding: 0;-->
+<!--            box-sizing: border-box;-->
+<!--            font-family: Arial;-->
+<!--        }-->
+<!--    </style>-->
+</head>
+<body>
+<script>
+    let elements = document.getElementsByTagName("*");
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].style.margin = "0";
+        elements[i].style.padding = "0";
+        elements[i].style.boxSizing = "border-box";
+        elements[i].style.fontFamily = "Arial";
+    }
+
+    let idSection = document.createElement("section");
+    document.querySelector("body").appendChild(idSection);
+    idSection.classList.add("Section");
+    idSection.style.backgroundColor = "#ccc";
+    idSection.style.width = "400px";
+    idSection.style.height = "500px";
+    idSection.style.margin = "40px auto";
+
+    let divContainer = document.createElement("div");
+    idSection.appendChild(divContainer);
+    divContainer.classList.add("Container");
+    divContainer.style.padding = "16px";
+
+    let caption = document.createElement("h2");
+    caption.classList.add("caption");
+    caption.textContent = "Login";
+    caption.style.textAlign = "center";
+    divContainer.appendChild(caption);
+
+    let centerTable = document.createElement("div");
+    divContainer.appendChild(centerTable);
+    centerTable.classList.add("center-table");
+    centerTable.style.position = "absolute";
+    centerTable.style.top = "20%";
+    centerTable.style.left = "50%";
+    centerTable.style.transform = "translate(-50%, -50%)";
+    centerTable.style.margin = "80px 0";
+
+    let trUser = document.createElement("tr");
+    centerTable.appendChild(trUser);
+
+    let tdUser = document.createElement("td");
+    trUser.appendChild(tdUser);
+
+    let labelUsername = document.createElement("label");
+    labelUsername.textContent = "User name: ";
+    tdUser.appendChild(labelUsername);
+
+    let inputUserName = document.createElement("input");
+    inputUserName.type = "text";
+    inputUserName.id = "getUserName";
+    tdUser.appendChild(inputUserName);
+
+    let smallUserName = document.createElement("small");
+    smallUserName.classList.add("smallUser");
+    tdUser.appendChild(smallUserName);
+    smallUserName.textContent = "Bạn chưa nhập user name!";
+    smallUserName.style.display = "none";
+
+
+    let trPass = document.createElement("tr");
+    centerTable.appendChild(trPass);
+
+    let tdPass = document.createElement("td");
+    trPass.appendChild(tdPass);
+
+    let labelPass = document.createElement("label");
+    labelPass.textContent = "Password";
+    tdPass.appendChild(labelPass);
+
+    let inputPass = document.createElement("input");
+    inputPass.type = "password";
+    inputPass.id = "getPassword";
+    tdPass.appendChild(inputPass);
+
+    let smallPassword = document.createElement("small");
+    smallPassword.classList.add("smallPass");
+    tdPass.appendChild(smallPassword);
+    smallPassword.textContent = "Bạn chưa nhập password!";
+    smallPassword.style.display = "none";
+
+    let trBtn = document.createElement("tr");
+    centerTable.appendChild(trBtn);
+    trBtn.classList.add("tr-btn");
+
+    let tdBtn = document.createElement("td");
+    trBtn.appendChild(tdBtn);
+    tdBtn.classList.add("td-btn");
+    tdBtn.style.display = "flex";
+
+    let inputSubmid = document.createElement("input");
+    inputSubmid.type = "submit";
+    inputSubmid.onclick = submitClickk;
+    tdBtn.appendChild(inputSubmid)
+
+    let inputReset = document.createElement("input");
+    inputReset.type = "reset";
+    inputReset.onclick = resetClickk;
+    tdBtn.appendChild(inputReset)
+
+
+    let selectAlltd = document.querySelectorAll("td");
+    for (let i = 0; i < selectAlltd.length; i++) {
+        selectAlltd[i].style.padding = "10px 0";
+        //selectAlltd[i].style.margin = "0 auto";
+
+    }
+
+    let selectAllInput = document.querySelectorAll("input");
+    for (let i = 0; i < selectAllInput.length; i++) {
+        selectAllInput[i].style.width = "95%";
+        selectAllInput[i].style.padding = "8px 5px";
+    }
+
+    let selectSmall = document.querySelectorAll("small");
+    for (let i = 0; i < selectSmall.length; i++) {
+        selectSmall[i].style.color = "red";
+    }
+
+    // Kiểm tra
+    function submitClickk() {
+        let inputUser = document.getElementById("getUserName");
+        let inputPass = document.getElementById("getPassword");
+        let smallUser = document.querySelector(".smallUser");
+        let smallPass = document.querySelector(".smallPass");
+
+        if (!inputUser.value) {
+            smallUser.style.display = "block";
+            inputUser.focus();
+            return false;
+        }else{
+            smallUser.style.display = "none";
+        }
+        if (!inputPass.value) {
+            smallPass.style.display = "block";
+            inputPass.focus();
+            return false;
+        }else {
+            smallPass.style.display = "none";
+        }
+
+        alert("Đăng nhập thành công!");
+    }
+
+    function resetClickk() {
+        console.log("111")
+        document.getElementById("getUserName").value = "";
+        document.getElementById("getPassword").value = "";
+    }
+</script>
+</body>
+</html>

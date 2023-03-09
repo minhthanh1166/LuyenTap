@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form submit</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .form-submit {
+            height: 250px;
+            width: 300px;
+            margin: 40px auto;
+            border: 1px solid #000;
+            padding: 20px;
+        }
+
+        .form-control {
+            padding-bottom: 20px;
+        }
+
+        .form-control input {
+            width: 100%;
+            padding: 10px 5px;
+        }
+
+        .form-control button {
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+<!--<script src="js/main.js"></script>-->
+<div class="form-submit">
+    <div class="form-control">
+        <label>Enter name: </label>
+        <input type="text" id="name" placeholder="name">
+    </div>
+    <div class="form-control">
+        <label>Enter age: </label>
+        <input type="number" id="age" placeholder="age">
+    </div>
+    <div class="form-control">
+        <button onclick="check()" style="padding-right: 10px;">Submit</button>
+        <button onclick="clear1()">Clear</button>
+    </div>
+</div>
+<script>
+    const check = () => {
+        var getName = document.getElementById("name").value
+        var getAge = document.getElementById("age").value;
+
+        console.log(getName);
+        console.log(getAge);
+
+        if (getName < 18) {
+            document.write("Bạn chưa đủ 18 tuổi! " + getName)
+        } else {
+            document.write("Bạn đã đủ 18 tuổi " + getName)
+        }
+    }
+
+    const clear1 = () => {
+        document.getElementById("name").value = "";
+        document.getElementById("age").value = "";
+    }
+</script>
+</body>
+</html>

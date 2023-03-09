@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form thiết kế trang như hình</title>
+    <style>
+      #div {
+        margin: 0;
+        padding: 0;
+        padding: 40px;
+        border: 10px solid #86e3f0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div">
+      <caption>
+        <h1>Đăng ký thông tin người sử dụng</h1>
+      </caption>
+      <table cellpadding="5">
+        <tbody>
+          <tr>
+            <td>
+              <label for="tenDangNhap">Tên đăng nhập:</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="userName"
+                id="userName"
+                placeholder="Nhập tên đăng nhập"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="matKhau">Mật khẩu:</label>
+            </td>
+            <td>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Nhập mật khẩu"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="nhapLaiMatKhau">Nhập lại mật khẩu:</label>
+            </td>
+            <td>
+              <input
+                type="password"
+                name="enterForPassword"
+                id="enterForPassword"
+                placeholder="Nhập lại mật khẩu"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="email">Email:</label>
+            </td>
+            <td>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="domain@gmail.com"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="gioiTinh">Giới tính:</label>
+            </td>
+            <td>
+              <input type="radio" name="gioiTinh" id="nam" value="1" checked />
+              <label for="nam">Nam</label>
+              <input type="radio" name="gioiTinh" id="nu" value="0" />
+              <label for="nu">Nữ</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="doTuoi">Đô tuổi:</label>
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="doTuoi"
+                id="duoi13"
+                value="13"
+                checked
+              />
+              <label for="duoi13">Dưới 13</label>
+              <input type="radio" name="doTuoi" id="13den17" value="14" />
+              <label for="13den17">13 đến 17 tuổi</label>
+              <input type="radio" name="doTuoi" id="18den25" value="15" />
+              <label for="18den25">18 đến 25 tuổi</label>
+              <input type="radio" name="doTuoi" id="tren25" value="16" />
+              <label for="tren25">Trên 25 tuổi</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="soThich">Sở thích của bản:</label>
+            </td>
+            <td>
+              <input type="checkbox" name="soThich" id="amNhac" checked />
+              <label for="amNhac">Âm nhạc</label>
+              <input type="checkbox" name="soThich" id="game" />
+              <label for="game">Game</label>
+              <input type="checkbox" name="soThich" id="theThao" />
+              <label for="theThao">Thể thao</label>
+              <input type="checkbox" name="soThich" id="duLich" />
+              <label for="duLich">Du lịch</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="ngheNghiep">Nghề nghiệp:</label>
+            </td>
+            <td>
+              <select name="ngheNghiep" id="chon">
+                <option value="chon">--Chọn nghề nghiệp--</option>
+                <option value="congNghe">Công nghệ thông tin</option>
+                <option value="coDienTu">Cơ điện tử</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="moTa">Mô tả bản thân:</label>
+            </td>
+
+            <td>
+              <textarea name="moTa" id="moTa" cols="30" rows="5"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center">
+              <input type="submit" name="submit" id="submit" value="Đăng ký" />
+              <input type="reset" name="reset" id="reset" value="Làm lại" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

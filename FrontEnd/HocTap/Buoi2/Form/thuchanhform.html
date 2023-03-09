@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành</title>
+  </head>
+  <body>
+    <div align="center">
+      <caption>
+        <h2>Đăng ký thành viên</h2>
+      </caption>
+      <table cellpadding="5">
+        <tbody>
+          <tr>
+            <td><label for="hoTen">Họ và tên</label></td>
+            <td>
+              <input
+                type="text"
+                name="hoTen"
+                id="hoTen"
+                placeholder="Nhập họ và tên"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="tenDangNhap">Tên đăng nhập</label></td>
+            <td>
+              <input
+                type="text"
+                name="tenDangNhap"
+                id="tenDangNhap"
+                placeholder="Nhập tên đăng nhập"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="matKhau">Mật khẩu</label></td>
+            <td>
+              <input
+                type="text"
+                name="matKhau"
+                id="matKhau"
+                placeholder="Nhập Mật khẩu"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="anhDaiDien">Ảnh đại diện</label></td>
+            <td>
+              <input type="file" name="anhDaiDien" id="anhDaiDien" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="thuDienTu">Thư điện tử</label></td>
+            <td>
+              <input
+                type="text"
+                name="thuDienTu"
+                id="thuDienTu"
+                placeholder="Nhập thư điện tử"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="gioiTinh">Giới tính</label></td>
+            <td>
+              <input type="radio" name="gioiTinh" id="nam" value="1" checked />
+              <label for="nam">Nam</label>
+              <input type="radio" name="gioiTinh" id="nu" value="0" />
+              <label for="nu">Nữ</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="soThich">Sở thích</label></td>
+            <td>
+              <input type="checkbox" name="soThich" id="bongDa" checked />
+              <label for="bongDa">Bóng đá</label>
+              <input type="checkbox" name="xemPhim" id="xemPhim" />
+              <label for="xemPhim">XemPhim</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="queQuan">Quê quán</label>
+            </td>
+            <td>
+              <select>
+                <option value="chon">--Chọn--</option>
+                <option value="hanoi">Hà Nội</option>
+                <option value="hcm">Hồ Chí Minh</option>
+                <option value="thaibinh">Thái Bình</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="diaChi">Địa chỉ</label></td>
+            <td>
+              <input
+                type="text"
+                name="diaChi"
+                id="diaChi"
+                placeholder="Nhập địa chỉ"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="dienThoai">Số điện thoại</label></td>
+            <td>
+              <input
+                type="tel"
+                name="dienThoai"
+                id="dienThoai"
+                placeholder="Nhập số điện thoại"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="thuDienTu">Mô tả ngắn</label></td>
+            <td>
+              <textarea name="" id="" cols="19" rows="5"></textarea>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td></td>
+            <td>
+              <input type="submit" name="submit" id="submit" />
+              <input type="reset" name="reset" id="reset" />
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </body>
+</html>

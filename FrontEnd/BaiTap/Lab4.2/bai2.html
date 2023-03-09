@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu doc</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        font-family: Arial, Helvetica;
+      }
+
+      section nav {
+        width: 250px;
+        background-color: #ccc;
+      }
+      nav ul {
+        list-style: none;
+      }
+
+      nav ul li a {
+        display: block;
+        padding: 1rem 1rem;
+        text-decoration: none;
+        color: #000;
+        font-weight: 700;
+        border-bottom: 1px solid #fff;
+      }
+
+      nav ul li:last-child a {
+        border: none;
+      }
+
+      nav a:hover {
+        background-color: red;
+        color: #fff;
+      }
+
+      nav ul li:first-child a {
+        background-color: red;
+        color: #fff;
+      }
+
+      nav ul li {
+        position: relative;
+      }
+
+      nav ul li > ul {
+        position: absolute;
+        left: 250px;
+        width: 250px;
+        top: 0;
+        display: none;
+      }
+
+      nav ul li > ul li a {
+        background-color: #ccc !important;
+        color: #000 !important;
+      }
+
+      nav ul li > ul li a:hover {
+        background-color: red !important;
+        color: #fff !important;
+      }
+
+      nav ul li:hover ul {
+        display: block;
+      }
+
+      nav ul li > ul li > ul li:last-child a {
+        background-color: red !important;
+        color: #fff !important;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <nav>
+        <ul>
+          <li>
+            <a href="">Laptop Dell</a>
+            <ul>
+              <li><a href="#">Dell Inspiron</a></li>
+              <li><a href="#">Dell Vostro</a></li>
+              <li><a href="#">Del XPS</a></li>
+              <li><a href="#">Dell Latitude</a></li>
+              <li>
+                <a href="#">Alienwere</a>
+                <ul>
+                  <li><a href="#">Ram 2GB</a></li>
+                  <li><a href="#">Ram 4GB</a></li>
+                  <li><a href="#">Ram 6GB</a></li>
+                  <li><a href="#">Ram 16GB</a></li>
+                  <li><a href="#">Ram 32GB</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">Laptop Hp</a></li>
+          <li><a href="#">laptop Lenovo</a></li>
+          <li><a href="#">Laptop Acer</a></li>
+          <li><a href="#">Laptop Asus</a></li>
+        </ul>
+      </nav>
+    </section>
+  </body>
+</html>

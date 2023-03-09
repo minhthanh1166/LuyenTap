@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Chương trình kiểm tra độ tuổi chịu trách nhiệm hình sự</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html body {
+            font-size: 16px;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        #section {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: auto;
+            background-color: rgb(58, 58, 94);
+            border-radius: 10px;
+        }
+
+        .container-section h1 {
+            font-size: 20px;
+            text-align: center;
+            margin: 30px 0;
+            color: #ccc;
+        }
+
+        .form-group {
+            margin: 16px;
+        }
+
+        .form-group label {
+            color: #ccc;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+        }
+
+        .form-group #result {
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+            color: #ccc;
+        }
+
+        .input-fluid {
+            display: flex;
+            margin-top: 30px;
+        }
+
+        .input-fluid input {
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        .input-fluid > input:nth-child(1) {
+            margin-right: 20px;
+            background-color: red;
+            color: #ccc;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .input-fluid > input:nth-child(1):hover {
+            opacity: 0.8;
+        }
+
+        .input-fluid > input:nth-child(2) {
+            margin-left: 20px;
+            background-color: rgb(9, 184, 9);
+            color: #ccc;
+            text-transform: uppercase;
+            font-weight: 700;
+
+        }
+
+        .input-fluid > input:nth-child(2):hover {
+            opacity: 0.8;
+        }
+
+        @media (min-width: 300px) and (max-width: 440.98px) {
+            #section {
+                padding: 0 5px;
+                width: 95%;
+            }
+        }
+
+        @media (min-width: 250px) and (max-width: 298.98px) {
+            #section {
+                padding: 0 5px;
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+<section id="section">
+    <div class="container-section">
+        <h1>Chương trình kiểm tra độ tuổi</h1>
+        <div class="form-group">
+            <label for="hoTen">Nhập họ và tên:</label>
+            <input type="text" id="hoTen" required/>
+        </div>
+        <div class="form-group">
+            <label for="doTuoi">Nhập độ tuổi của bạn:</label>
+            <input type="number" id="doTuoi" required/>
+        </div>
+        <div class="form-group">
+            <label for="result">Kết quả kiểm tra:</label>
+            <div id="result"></div>
+        </div>
+        <div class="form-group">
+            <div class="input-fluid">
+                <input type="submit" onclick="mySubmit()" value="Submit"/>
+                <input type="reset" onclick="myResets()" value="Reset"/>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    const mySubmit = () => {
+        let name = document.getElementById("hoTen").value;
+        let age = document.getElementById("doTuoi").value;
+        let resultLT = document.getElementById("result");
+        // Check regex pattern
+        let numberRegex = /[\d\W]/g;
+        let myName = name.trim();
+        let arr = myName.split("");
+        console.log(arr)
+        if (name === "") {
+            resultLT.style.backgroundColor = "rgb(58, 58, 94)";
+            resultLT.innerText = "Vui lòng không được để trống họ tên!";
+            return false;
+        }else if(name.length < 5) {
+            resultLT.style.backgroundColor = "rgb(58, 58, 94)";
+            resultLT.innerText = "Vui lòng nhập đầy đủ họ tên!";
+            return false;
+        } else if (age === "") {
+            resultLT.style.backgroundColor = "rgb(58, 58, 94)";
+            let checkAge = name === "" ? "Bạn" : name;
+            resultLT.innerText = `Vui lòng nhập tuổi  ${checkAge}`;
+        } else {
+            // Hàm search xem trong chuỗi đấy và trả ra index.
+            console.log(name.search(numberRegex));
+            if (name.search(numberRegex) !== -1) {
+                console.log(typeof name.search(numberRegex))
+                resultLT.style.backgroundColor = "rgb(58, 58, 94)";
+                resultLT.innerText = "Vui lòng nhập đúng định dạng!"
+            } else {
+                let checkNumberAgeOne = age >= 18 ? "Đã qua" : "Chưa qua";
+                let checkNumberAgeTwo = age === "18" ? "Đã đủ" : checkNumberAgeOne;
+                if (age >= 18) {
+                    resultLT.style.backgroundColor = "red";
+                    resultLT.innerText = `${name} đã đủ ${age} chịu trách nhiệm hình sự. (${checkNumberAgeTwo} 18 tuổi)`;
+                } else {
+                    resultLT.style.backgroundColor = "green";
+                    resultLT.innerText = `${name} chưa đủ ${age} chịu trách nhiệm hình sự. (${checkNumberAgeOne} 18 tuổi)`;
+                }
+            }
+        }
+    };
+    const myResets = () => {
+        location.reload();
+    };
+</script>
+</body>
+</html>

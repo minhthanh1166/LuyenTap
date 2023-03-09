@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    #section {
+
+
+    }
+
+    .btn-combobox ul {
+      list-style-type: none;
+      display: flex;
+
+    }
+
+    .btn-combobox li {
+        margin-top: 12px;
+    }
+
+    .btn-combobox a {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      color: #000;
+    }
+
+    .btn-combobox li:hover a {
+      background-color: #8954de;
+      color: #fff;
+    }
+
+    .content-box {
+      border: 2px solid #ccc;
+      width: 550px;
+      height: 400px;
+      margin-top: 9px;
+    }
+
+    .content-box #content {
+      padding: 10px;
+    }
+
+    .btn-combobox .active {
+      background-color: #8954de;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+<section id="section">
+  <div class="btn-combobox">
+    <ul>
+      <li><a id="html" class="active" href="#">HTML</a></li>
+      <li><a id="css" href="#">CSS</a></li>
+      <li><a id="jquery" href="#">JQUERY</a></li>
+      <li><a id="php" href="#">PHP</a></li>
+    </ul>
+  </div>
+  <div class="content-box">
+    <p id="content"></p>
+  </div>
+</section>
+<script src="jquery-3.6.3.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $("#content").text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries")
+    $("#html").click(function () {
+        $("#html").css({"background-color": "#8954de", "color": "#FFF"})
+        $("#css").css({"background-color": "#fff", "color": "#000"})
+        $("#jquery").css({"background-color": "#fff", "color": "#000"})
+        $("#php").css({"background-color": "#fff", "color": "#000"})
+        $("#content").text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries");
+    });
+    $("#css").click(function () {
+      $("#html").css({"background-color": "#fff", "color": "#000"})
+      $("#css").css({"background-color": "#8954de", "color": "#FFF"})
+      $("#jquery").css({"background-color": "#fff", "color": "#000"})
+      $("#php").css({"background-color": "#fff", "color": "#000"})
+      $("#content").text("It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using");
+    });
+    $("#jquery").click(function () {
+      $("#css").css({"background-color": "#fff", "color": "#000"})
+      $("#php").css({"background-color": "#fff", "color": "#000"})
+      $("#html").css({"background-color": "#fff", "color": "#000"})
+      $("#jquery").css({"background-color": "#8954de", "color": "#FFF"})
+      $("#content").text("Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur");
+    });
+    $("#php").click(function () {
+      $("#jquery").css({"background-color": "#fff", "color": "#000"})
+      $("#css").css({"background-color": "#fff", "color": "#000"})
+      $("#html").css({"background-color": "#fff", "color": "#000"})
+      $("#php").css({"background-color": "#8954de", "color": "#FFF"})
+      $("#content").text("There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.");
+    });
+  });
+</script>
+</body>
+</html>

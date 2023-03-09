@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 13</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #wrapper {
+        min-height: 80vh;
+        width: 500px;
+      }
+
+      .style-img {
+        display: flex;
+        justify-content: center;
+        background-color: #3b5997;
+      }
+
+      .inp-box,
+      .date-input,
+      .radio,
+      .title-bottom,
+      .btn-submit,
+      .text-footer {
+        padding: 10px 26px;
+      }
+
+      .title-register {
+        margin-top: 10px;
+      }
+      .title-register > h1 {
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .title-register > p {
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+
+      .form-p1 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .form-p1 > input {
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        margin-right: 2px;
+        width: 49%;
+        font-size: 16px;
+      }
+
+      .form-group {
+        margin: 10px 0 0 0;
+      }
+
+      .form-group > input {
+        padding: 10px;
+        border: 2px solid #ccc;
+        width: 100%;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .date-input > p {
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      .date-day {
+        display: flex;
+      }
+      .date-day > input {
+        padding: 5px;
+      }
+      .date-day > .caption-date {
+        margin-left: 10px;
+      }
+      .date-day > .caption-date > span > a {
+        text-decoration: none;
+        color: #05318a;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      /*  */
+      .style-img > img {
+        width: 200px;
+      }
+      .radio > span {
+        padding-right: 10px;
+      }
+
+      .title-bottom > p {
+        font-size: 14px;
+      }
+
+      .text-bottom > a {
+        text-decoration: none;
+        color: #05318a;
+        font-weight: 500;
+      }
+
+      .btn-submit > input {
+        padding: 10px 40px;
+        border-radius: 8px;
+        background-color: #5f9d4a;
+        border: 1px;
+        font-weight: 700;
+        font-size: 20px;
+        color: white;
+      }
+
+      .text-footer > p {
+        font-size: 14px;
+      }
+      .text-footer > p > span > a {
+        color: #05318a;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      @media (width >= 500px) {
+        body {
+          padding: 0;
+        }
+        #wrapper {
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="style-img">
+        <img
+          src="https://fptshop.com.vn/uploads/originals/2017/8/20//636388366703536000_tron-bo-icon-the-hien-cam-xuc-tren-facebook-cover.jpg"
+          alt="Facebook"
+        />
+      </div>
+      <div class="inp-box">
+        <div class="title-register">
+          <h1>Đăng ký</h1>
+          <p><big>Luôn miễn phí</big></p>
+        </div>
+        <div class="form-p1">
+          <input type="text" name="firstName" id="firstName" placeholder="Họ" />
+          <input type="text" name="lastName" id="lastName" placeholder="Tên" />
+        </div>
+        <div class="form-group">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Số di động hoặc email"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Mật khẩu mới"
+          />
+        </div>
+      </div>
+      <div class="date-input">
+        <p><big>Ngày sinh</big></p>
+        <div class="date-day">
+          <input type="text" style="width: 70px" placeholder="Ngày" />
+          <input type="text" style="width: 100px" placeholder="Tháng" />
+          <input type="text" style="width: 70px" placeholder="Năm" />
+          <p class="caption-date">
+            <span
+              ><a href="">Tại sao tôi cần cung cấp ngày sinh của mình?</a></span
+            >
+          </p>
+        </div>
+      </div>
+      <div class="radio">
+        <span>
+          <input type="radio" name="gioiTinh" id="nam" value="1" checked />
+          <label for="nam">Nam</label>
+        </span>
+        <span>
+          <input type="radio" name="gioiTinh" id="nu" value="0" />
+          <label for="nam">Nữ</label>
+        </span>
+      </div>
+      <div class="title-bottom">
+        <p>
+          Bằng cách nhấn vào tạo tài khoản, bạn đồng ý với.
+          <span class="text-bottom"><a href="">Điều khoản</a></span> của chúng
+          tôi và rằng bạn đã đọc.
+          <span class="text-bottom"><a href="">Chính sách dữ liệu</a></span> của
+          chúng tôi, bao gồm.
+          <span class="text-bottom"><a href="">Sử dụng cookie</a></span
+          >.Bạn cố thể nhận được thông báo qua SMS từ Facebook và có thể chọn
+          mấy kỳ lúc nào.
+        </p>
+      </div>
+      <div class="btn-submit">
+        <input type="submit" name="submit" id="submit" value="Tạo tài khoản" />
+      </div>
+      <div class="text-footer">
+        <p>
+          <span class="text-ft-bt"><a href="">Tạo trang</a></span> dành cho
+          người nổi tiếng, nhãn hiệu hoặc doanh nghiêp.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

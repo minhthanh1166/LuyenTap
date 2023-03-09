@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chương trình tính tổng các phần tử trong mảng</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            font-size: 16px;
+            font-family: "Agency FB";
+        }
+
+        #section {
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 350px;
+            height: 450px;
+            border-radius: 10px;
+        }
+
+        .border-section {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 330px;
+            height: 430px;
+            border: 1px solid #fff;
+            border-radius: 10px;
+        }
+
+        .container-section {
+            padding: 16px;
+
+        }
+
+        .container-section h1 {
+            color: #ccc;
+            text-align: center;
+        }
+
+        .container-section #result,
+        .container-section #result2,
+        .container-section #result3 {
+            color: #ccc;
+            padding: 20px 5px;
+        }
+
+        .container-section .input-group {
+            margin: 30px 0;
+            color: #cccccc;
+            margin-right: 50px ;
+            margin-left: 30px;
+
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px 10px;
+            border-radius: 5px;
+            border: 1px dashed #fff;
+        }
+
+        .input-submit {
+            display: flex;
+            justify-content: center;
+        }
+
+        .input-submit input {
+            padding: 9px;
+            font-family: "Courier New", Courier, monospace;
+            text-transform: uppercase;
+            font-weight: bold;
+            background-color: green;
+            color: #fff;
+            border-radius: 5px;
+            border: 2px dashed #fff;
+        }
+        .input-submit input:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+<section id="section">
+    <div class="border-section">
+        <div class="container-section">
+            <h1>Chương trình tính tổng <br> các phần tử trong mảng</h1>
+            <div id="result"></div>
+            <div id="result2"></div>
+            <div id="result3"></div>
+
+            <div class="input-group">
+                <label for="enterElement">Nhập phần tử:</label>
+                <input type="number" name="enterElement" id="enterElement">
+            </div>
+            <div class="input-submit">
+                <input type="submit" onclick="mySubmit()">
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+
+
+    // Hàm để in các phần tử
+    const myCount = (arr) => {
+        let resultCount;
+        for (let j = 0; j < arr.length; j++) {
+            resultCount = arr;
+        }
+        return resultCount;
+    }
+
+
+
+    // Button submid
+    const mySubmit = () => {
+        let resultJS = document.getElementById("result");
+        let resultJSTwo = document.querySelector("#result2");
+        let resultJSThree = document.querySelector("#result3");
+        let inputPT = document.getElementById("enterElement").value;
+        let maxNumber = 20;
+        console.log("Check đầu vào: " + inputPT)
+        // Kiểm tra chuỗi rỗng
+        if (inputPT === ""){
+            resultJSThree.innerText = "--Vui lòng nhập dữ liệu!";
+        }else if(inputPT.length > maxNumber) {
+            resultJSThree.innerText = "--Vui lòng nhập nhỏ hơn 20 phần tử!";
+        }else {
+            let myTrim = inputPT.trim();
+            let mySplip = myTrim.split("");
+            console.log(mySplip)
+
+            // Đếm phần tử
+            // This function takes a string as input and returns the sum of all numbers in it
+            // Split the string by commas and store it in an array
+            let strArr = inputPT.split("");
+            // Use reduce method to calculate the sum of all numbers in the array
+            // Convert each element to a number using parseFloat
+            let sum = strArr.reduce((acc, val) => acc + parseFloat(val.toString()), 0);
+            // Return the sum
+
+            resultJS.value = sum;
+            console.log("tổng các phần tử: " + sum);
+
+            resultJSThree.innerText = "";
+            resultJS.innerText = `-- Tổng các phần tử là:${sum}`;
+            resultJSTwo.innerText = `-- Các phần tử là: ${myCount(mySplip.toString())}`;
+        }
+    }
+</script>
+</body>
+</html>

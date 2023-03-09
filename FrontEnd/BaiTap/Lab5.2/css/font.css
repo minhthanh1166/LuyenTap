@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Ubuntu-Bold" ;
+    src: url(../../Lab5.2/fonts/Ubuntu/Ubuntu-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Ubuntu-Light";
+    src: url(../../Lab5.2/fonts/Ubuntu/Ubuntu-Light.ttf);
+}
