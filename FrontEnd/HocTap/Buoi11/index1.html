@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        .box {
+            width: 100%;
+            border: 1px solid #000;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<!--<h1 class="text-success">Hello, world!</h1>-->
+<!--<h1 class="text-primary">Hello, world!</h1>-->
+<!--<h1 class="text-danger">Hello, world!</h1>-->
+
+
+<!--Col 1 đến col 12-->
+<!--<div class="container">-->
+<!--    <div class="row">-->
+
+<!--        <div class="col-12 col-ms-6 col-md-4 col-lg-3 mt-3">-->
+<!--            <div class="box d-none d-md-block">-->
+<!--                <p class="text-primary">Display</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="col-12 col-ms-6 col-md-4 col-lg-3 mt-3">-->
+<!--            <div class="box"></div>-->
+<!--        </div>-->
+<!--        <div class="col-12 col-ms-6 col-md-4 col-lg-3 mt-3">-->
+<!--            <div class="box"></div>-->
+<!--        </div>-->
+<!--        <div class="col-12 col-ms-6 col-md-4 col-lg-3 mt-3">-->
+<!--            <div class="box"></div>-->
+<!--        </div>-->
+<!--        <div class="col-12 col-ms-6 col-md-4 col-lg-3 mt-3">-->
+<!--            <div class="box"></div>-->
+<!--        </div>-->
+<!--        <div class="col-12 col-ms-6 col-md-4 col-lg-3 mt-3">-->
+<!--            <div class="box"></div>-->
+<!--        </div>-->
+<!--        <div class="col-12 col-ms-6 col-md-4 col-lg-3 mt-3">-->
+<!--            <div class="box"></div>-->
+<!--        </div>-->
+<!--        <div class="col-12 col-ms-6 col-md-4 col-lg-3 mt-3">-->
+<!--            <div class="box"></div>-->
+<!--        </div>-->
+<!--        <div class="col-12 col-ms-6 col-md-4 col-lg-3 mt-3">-->
+<!--            <div class="box"></div>-->
+<!--        </div>-->
+<!--        <div class="col-12 col-ms-6 col-md-4 col-lg-3 mt-3">-->
+<!--            <div class="box"></div>-->
+<!--        </div>-->
+<!--        <div class="col-12 col-ms-6 col-md-4 col-lg-3 mt-3">-->
+<!--            <div class="box"></div>-->
+<!--        </div>-->
+<!--        <div class="col-12 col-ms-6 col-md-4 col-lg-3 mt-3">-->
+<!--            <div class="box"></div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div class="col">-->
+<!--    <div class="col-6">-->
+<!--        <div class="box">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="col-6">-->
+<!--        <div class="box">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div class="container">-->
+<!--    <table class="table bg-primary text-light">-->
+<!--        <thead class="table-success">-->
+<!--        <tr>-->
+<!--            <th scope="col">#</th>-->
+<!--            <th scope="col">First</th>-->
+<!--            <th scope="col">Last</th>-->
+<!--            <th scope="col">Handle</th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody class="table-group-divider table-warning">-->
+<!--        <tr > -->
+<!--            <th scope="row">1</th>-->
+<!--            <td>Mark</td>-->
+<!--            <td>Otto</td>-->
+<!--            <td>@mdo</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th scope="row">2</th>-->
+<!--            <td>Jacob</td>-->
+<!--            <td>Thornton</td>-->
+<!--            <td>@fat</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th scope="row">3</th>-->
+<!--            <td colspan="2">Larry the Bird</td>-->
+<!--            <td>@twitter</td>-->
+<!--        </tr>-->
+<!--        </tbody>-->
+<!--    </table>-->
+<!--</div>-->
+
+<div class="container mt-5">
+    <form>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+            </svg>Reset</button>
+        <button type="submit" class="btn btn-danger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16" >
+                <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+            </svg>Delete</button>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+</html>
